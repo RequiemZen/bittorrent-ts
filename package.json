@@ -4,9 +4,16 @@
   "license": "ISC",
   "type": "module",
   "description": "A BitTorrent client written in TypeScript",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
   "devDependencies": {
+    "@types/bencode": "^2.0.4",
     "@types/node": "^25.2.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "bencode": "^4.0.0"
   }
 }
