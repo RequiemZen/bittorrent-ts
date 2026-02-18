@@ -5,7 +5,7 @@
   "type": "module",
   "description": "A BitTorrent client written in TypeScript",
   "scripts": {
-    "dev": "tsx src/index.ts"
+    "dev": "tsx index.ts"
   },
   "devDependencies": {
     "@types/bencode": "^2.0.4",

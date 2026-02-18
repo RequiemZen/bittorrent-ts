@@ -28,7 +28,7 @@ export interface Torrent {
   'url-list'?: Uint8Array[];
 }
 
-interface Peer {
+export interface Peer {
   ip: string;
   port: number;
 }

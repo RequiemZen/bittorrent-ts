@@ -6,7 +6,8 @@ import { Torrent, GetPeersCallback } from './types';
 
 export const getPeers = (torrent: Torrent, callback: GetPeersCallback) => {
   const socket = dgram.createSocket("udp4");
-  const url = Buffer.from(torrent.announce).toString("utf8");
+  const url = "udp://tracker.opentrackr.org:1337/announce";
+  // const url = Buffer.from(torrent.announce).toString("utf8"); 
 
   udpSend(socket, buildConnReq(), url);
 
