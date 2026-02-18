@@ -1,5 +1,12 @@
 import fs from "fs";
 import bencode from "bencode";
+// import { getPeers } from "./tracker"
+import { torrentParser } from "./torrent-parser";
+import path from "path";
 
-const torrent = bencode.decode(fs.readFileSync("puppy.torrent"));
-console.log(torrent.announce.toString("utf-8"));
+const torrent = torrentParser.open("puppy.torrent");
+console.log(torrentParser.size(torrent));
+
+// getPeers(torrent, peers => {
+//   console.log(`list of peers: ${peers}`);
+// })
