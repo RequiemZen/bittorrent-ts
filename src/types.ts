@@ -27,3 +27,10 @@ export interface Torrent {
   encoding?: Uint8Array;
   'url-list'?: Uint8Array[];
 }
+
+interface Peer {
+  ip: string;
+  port: number;
+}
+
+export type GetPeersCallback = (peers: Peer[]) => void;
